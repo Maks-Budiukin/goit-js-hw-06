@@ -14,10 +14,10 @@ destroyBtn.addEventListener('click', onDestroyBtnClick);
 let divWidth = 20;
 let divHeight = 20;
 
-
-
+// const boxes = document.createElement('div');
+const boxes = [];
 function onCreateBtnClick() {
-
+  
   for (let i = 0; i < inputEl.value; i += 1) {
   
   const div = document.createElement('div');
@@ -26,9 +26,10 @@ function onCreateBtnClick() {
   div.style.height = `${divHeight += 10}px`;
   div.style.backgroundColor = getRandomHexColor();
     
-  boxesEl.append(div);
+    // boxes.append(div);
+    boxes.push(div);
 }
-  
+  boxesEl.append(...boxes);
 }
 
 function onDestroyBtnClick() {

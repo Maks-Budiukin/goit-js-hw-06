@@ -5,7 +5,7 @@ console.log("");
 
 for (let category of categoriesList) {
     
-    console.log(`Category: ${category.querySelector('h2').textContent}`);
-    console.log(`Elements: ${category.querySelectorAll('li').length}`);
+    console.log(`Category: ${category.firstElementChild.textContent}`);
+    console.log(`Elements: ${category.lastElementChild.children.length}`);
     console.log("");
 }
